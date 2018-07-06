@@ -1,0 +1,15 @@
+연습 16.1.
+def print_time():
+	time=Time()
+	print('{0}시{1}분{2}초'.format(str(time.hour),str(time.minute),str(time.second)))
+
+빈도수세기
+word = 'brontosaurus'
+d = dict()
+for c in word:
+    if c not in d:
+        d[c] = 1
+    else:
+        d[c] = d[c] + 1
+print (d)
+

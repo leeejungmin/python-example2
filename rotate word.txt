@@ -1,0 +1,3 @@
+def rotate(strg,n):
+    return strg[n:] + strg[:n]
+     n = n % len(strg)

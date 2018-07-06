@@ -1,0 +1,35 @@
+import xlsxwriter
+>>> workbook = xlsxwriter.Workbook('D://ggg.xlsx')
+>>> worksheet.write('A2', 'World', bold)
+0
+>>> workbook.close()
+from openpyxl import Workbook
+>>> ws=wb.active
+wb=Workbook()
+>>> ws=wb.active
+>>> ws['A1']=42
+>>> import datetime
+>>> ws['A2']=datetime.datetime.now()
+>>> wb.save("jungmin.xlsx")
+>>>  wb = Workbook(w>>> sh=wb['Sheet1']
+>>> sh['A1'].value
+'Hello'
+>>> for row in sh.rows:
+	for cell in row:
+		print(cell.value)
+
+		
+Hello
+11111
+ertrty
+World
+asdf
+tyuiiirite_only=True)
+
+from openpyxl import load_workbook
+wb = load_workbook(filename='large_file.xlsx', read_only=True)
+ws = wb['big_data'] # ws is now an IterableWorksheet
+
+for row in ws.rows:
+    for cell in row:
+        print(cell.value)

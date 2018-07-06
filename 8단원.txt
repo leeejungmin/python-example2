@@ -1,0 +1,30 @@
+ex)8.13
+
+def is_palindrome(word):
+	return word[0:len(word)]==word[::-1]
+
+is_palindrome('goog')
+
+ex)7.3
+from math import*
+def test_square_root(n):
+	print("{0}  {1}".format(n,sqrt(n)))
+
+
+def jjjj(m):
+	for i in range(m):
+		test_square_root(m)
+
+ex)7.4
+
+
+
+def lll():
+	jj=int(input("값을 입력하세요"))
+	print(jj)
+
+이거는 왜 안되는가...
+
+def ll(n):
+import math
+	print(int(n))

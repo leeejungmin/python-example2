@@ -1,0 +1,84 @@
+﻿/////////////////9/1//////////////ó��
+
+
+>>> import xlsxwriter
+>>> workbook= xlsxwriter.Workbook('D://ggg.xlsx')
+>>> worksheet1 = workbook.add_worksheet()
+>>> worksheet2 = workbook.add_worksheet('Lee')
+>>> worksheet1.write('A1','leejung')
+0
+>>> for i in range(0,5):worksheet2.write()
+
+k=1
+>>> for i in range(0,5):
+	for j in range(0,5):
+		worksheet2.write(i,j,k)
+		k=k+1
+
+
+ workbook.close()
+>>> from openpyxl import Workbook
+
+>>> wb = Workbook()
+>>> ws = wb.active
+>>> ws['A1'] = 42
+>>> ws.append([1, 2, 3])
+>>> wb.save('D://test.xlsx')
+>>> ws.append([4,5,6,7])
+>>> wb.save('D://test.xlsx')
+>>> from openpyxl import load_workbook
+>>> wb = load_workbook(filename='ggg.xlsx', read_only=True)
+>>> ws = wb['lee']
+
+wb = load_workbook(filename='D://ggg.xlsx', read_only=True)
+>>> ws=wb['Lee']
+>>> for i in ws.rows:
+	for j in row:
+		print(cell,value)
+
+		
+Traceback (most recent call last):
+  File "<pyshell#33>", line 2, in <module>
+    for j in row:
+NameError: name 'row' is not defined
+>>> or i in ws.rows:
+	for j in i:
+		print(j.value)
+		
+
+>>> for i in ws.rows:
+	for j in i:
+		print(j.value)
+
+------------------9/3--------------------------------
+for i in '12345':
+	for j in 'ABCDE':
+		print(sheet_ranges['%s%s'%(j,i)].value)
+
+
+
+
+for i in '12345':
+	for j in 'ABCDE':
+		if (sheet_ranges['%s%s'%(j,i)].value)%5==0:
+			print(sheet_ranges['%s%s'%(j,i)].value)
+		if not(sheet_ranges['%s%s'%(j,i)].value)%5==0:
+			print(sheet_ranges['%s%s'%(j,i)].value,end='')
+
+wb = load_workbook(filename = 'D://xxx.xlsx')
+>>> xx=wb['Jung']
+>>> xx['A1'].value
+1
+>>> xx['A3']="=SUM(A1:E5)"
+>>> 
+>>> wb.save('D://xxx.xlsx')
+////////////////9/4///////////////////////////////////
+엑셀 자료 파이썬에서 처리하기
+def cc(E):
+	
+	b=0
+	for i in range(1,6):
+		a=int((ws['%s%d'%(E,i)].value))
+		b=b+a
+		return b
+

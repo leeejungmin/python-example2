@@ -1,0 +1,14 @@
+def print_n(s,n):
+if n<=0:
+return
+print n
+print_n(s,n-1)
+
+
+ex)10.9
+def oo(t):
+	s = t[:]
+	s.sort()
+	for i in range(len(s)-1):
+		if  s[i] == s[i+1]:
+			del s[i]

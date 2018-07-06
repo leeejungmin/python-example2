@@ -1,0 +1,24 @@
+def ll(t,k):
+	for i in range(len(t)):
+		if not t[i]==k[i]:
+			return False
+		return True
+
+	
+>>> ll(k,t)
+True
+
+t=['a','b','c']
+>>> k=['a','b','c']
+
+
+
+e들어간거 빼고 글자적기[더 보완해야됨]
+
+def ll(word):
+	for i in range(len(word)):
+		if word[i] =='e':
+			word=word[:i]+word[i+1:]
+			print(word)
+			return ll(word)
+		else:print('ohhhh')

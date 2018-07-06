@@ -1,0 +1,92 @@
+ef has_duplicates(t):
+    
+    
+    d = {}
+    for x in t:
+        if x in d:
+            return True
+        
+    return False
+
+
+def has_duplicates2(t):
+    """Checks whether any element appears more than once in a sequence.
+
+    Faster version using a set.
+
+    t: sequence
+    """
+    return len(set(t)) < len(t)
+
+
+if __name__ == '__main__':
+    t = [1, 2, 3]
+    print has_duplicates(t)
+    t.append(1)
+    print has_duplicates(t)
+
+    t = [1, 2, 3]
+    print has_duplicates2(t)
+    t.append(1)
+    print has_duplicates2(t)
+나이 맞추기
+for i in range(50):
+	ee=str(int(ll)+i)
+	kk=str(int(oo)+i)
+	if (ee[0]==kk[1])&(ee[1]==kk[0]):
+		print(ee,kk)
+	else: print('우')
+
+반대단어 맞추기
+def reverse_pair(word_list, word):
+    
+
+    
+    rev_word = word[::-1]
+    return in_bisect(word_list, rev_word)
+        
+
+if __name__ == '__main__':
+    word_list = make_word_list()
+    
+    for word in word_list:
+        if reverse_pair(word_list, word):
+            print word, word[::-1]
+
+
+[연습 12.4.]
+def read_file(filename):
+    
+	return open(filename).read()
+	if __name__ == '__main__':
+		s = read_file('words.txt')
+		t = most_frequent(s)
+		for x in t:
+			print(x)
+
+			
+>>> def make_histogram(s):
+	hist = {}
+	for x in s:
+		hist[x] = hist.get(x, 0) + 1
+		return hist
+
+	
+>>> import random
+
+
+def most_frequent(s):
+   
+    hist = make_histogram(s)
+
+    t = []
+    for x, freq in hist.iteritems():
+	t.append((freq, x))
+
+    t.sort(reverse=True)
+
+    res = []
+    for freq, x in t:
+	 res.append(x)
+
+    return res
